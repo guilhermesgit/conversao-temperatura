@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: conversaotemp
+  labels:
+    app: conversaotemp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: conversaotemp
+  template:
+    metadata:
+      labels:
+        app: conversaotemp
+    spec:
+      containers:
+      - name: conversaotemp
+        image: guilhermecb10/conversaotemp:v1
+        ports:
+        - containerPort: 8080
