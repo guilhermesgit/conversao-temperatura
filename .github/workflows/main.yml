@@ -53,7 +53,7 @@ jobs:
           with:
             images: guilhermecb10/conversaotemp:${{ github.run_number}} 
             manifests: |
-              deployment.yaml
+              .src/deployment.yaml
 
 
         - name: Run a multi-line script
