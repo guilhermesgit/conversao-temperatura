@@ -53,10 +53,4 @@ jobs:
           with:
             images: guilhermecb10/conversaotemp:${{ github.run_number}} 
             manifests: |
-              .src/deployment.yaml
-
-
-        - name: Run a multi-line script
-          run: |
-            echo Add other actions to build,
-            echo test, and deploy your project.
+              src/deployment.yaml
